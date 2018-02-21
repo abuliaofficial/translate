@@ -107,7 +107,7 @@ var Main = function() {
 	this.namesTitleElement = window.document.getElementById("namestitle");
 	this.randomThemeElement = window.document.getElementById("random");
 	this.generateElement = window.document.getElementById("generate");
-	this.currentNamesElement = window.document.getElementById("currentnames");
+	this.currentNamesElement = window.document.getElementById("currentname");
 	this.noNamesFoundElement = window.document.getElementById("nonamesfound");
 	this.maxProcessingTimeElement = window.document.getElementById("maxtime");
 	this.maxWordsToGenerateElement = window.document.getElementById("maxwordstogenerate");
@@ -173,7 +173,7 @@ Main.prototype = {
 			this.nameDataDataListElement.appendChild(makeOption());
 			this.trainingDataTopicTrie.insert(data[0].displayName);
 		}
-		this.set_trainingDataKey("Abulia");
+		this.set_trainingDataKey("Abülski");
 		this.maxWordsToGenerate = 200;
 		this.minLength = 2;
 		this.maxLength = 15;
@@ -305,8 +305,9 @@ Main.prototype = {
 						throw new js__$Boot_HaxeError("FAIL: str != null");
 					}
 					//li.textContent = HxOverrides.substr(name,0,1).toUpperCase() + HxOverrides.substr(name,1,name.length - 1);
-					li.textContent = name;
-					this.currentNamesElement.appendChild(li);
+					//li.textContent = name;
+					//this.currentNamesElement.appendChild(li);
+          this.currentNamesElement.innerHTML += name + " ";
 				}
 			}
 			if(customTrainingData.length > 3) {
@@ -459,8 +460,9 @@ Main.prototype = {
 							throw new js__$Boot_HaxeError("FAIL: str != null");
 						}
 						//li1.textContent = HxOverrides.substr(name3,0,1).toUpperCase() + HxOverrides.substr(name3,1,name3.length - 1);
-						li1.textContent = name3;
-						_gthis2.currentNamesElement.appendChild(li1);
+//						li1.textContent = name3;
+//						_gthis2.currentNamesElement.appendChild(li1);
+					_gthis2.currentNamesElement.innerHTML += name3 +" ";
 					}
 				}
 			}
@@ -550,8 +552,9 @@ Main.prototype = {
 							throw new js__$Boot_HaxeError("FAIL: str != null");
 						}
 						//li2.textContent = HxOverrides.substr(name6,0,1).toUpperCase() + HxOverrides.substr(name6,1,name6.length - 1);
-						li2.textContent = name6;
-						_gthis2.currentNamesElement.appendChild(li2);
+//						li2.textContent = name6;
+//						_gthis2.currentNamesElement.appendChild(li2);
+					_gthis2.currentNamesElement.innerHTML += name6 + " ";
 					}
 				}
 			}
@@ -644,8 +647,9 @@ Main.prototype = {
 							throw new js__$Boot_HaxeError("FAIL: str != null");
 						}
 						//li3.textContent = HxOverrides.substr(name9,0,1).toUpperCase() + HxOverrides.substr(name9,1,name9.length - 1);
-						li3.textContent = name9;
-						_gthis2.currentNamesElement.appendChild(li3);
+//						li3.textContent = name9;
+//						_gthis2.currentNamesElement.appendChild(li3);
+						_gthis2.currentNamesElement.innerHTML +=name9 +" ";
 					}
 				}
 			}
@@ -866,7 +870,8 @@ Main.prototype = {
 				}
 				//li.textContent = HxOverrides.substr(name,0,1).toUpperCase() + HxOverrides.substr(name,1,name.length - 1);
 				li.textContent = name;
-				this.currentNamesElement.appendChild(li);
+//				this.currentNamesElement.appendChild(li);
+				this.currentNamesElement.innerHTML +=name +" ";
 			}
 		}
 		if(customTrainingData.length > 3) {
@@ -1070,8 +1075,9 @@ Main.prototype = {
 							throw new js__$Boot_HaxeError("FAIL: str != null");
 						}
 						//li.textContent = HxOverrides.substr(name2,0,1).toUpperCase() + HxOverrides.substr(name2,1,name2.length - 1);
-						li.textContent = name2;
-						_gthis.currentNamesElement.appendChild(li);
+						//li.textContent = name2;
+						_gthis.currentNamesElement.innerHTML +=name2 + " ";
+						//_gthis.currentNamesElement.appendChild(li);
 					}
 				}
 			}
@@ -1161,8 +1167,9 @@ Main.prototype = {
 							throw new js__$Boot_HaxeError("FAIL: str != null");
 						}
 						//li1.textContent = HxOverrides.substr(name5,0,1).toUpperCase() + HxOverrides.substr(name5,1,name5.length - 1);
-						li1.textContent = name5;
-						_gthis.currentNamesElement.appendChild(li1);
+//						li1.textContent = name5;
+//						_gthis.currentNamesElement.appendChild(li1);
+						_gthis.currentNamesElement.innerHTML +=name5 + " ";
 					}
 				}
 			}
@@ -1255,8 +1262,9 @@ Main.prototype = {
 							throw new js__$Boot_HaxeError("FAIL: str != null");
 						}
 						//li2.textContent = HxOverrides.substr(name8,0,1).toUpperCase() + HxOverrides.substr(name8,1,name8.length - 1);
-						li2.textContent = name8;
-						_gthis.currentNamesElement.appendChild(li2);
+//						li2.textContent = name8;
+//						_gthis.currentNamesElement.appendChild(li2);
+						_gthis.currentNamesElement.innerHTML +=name8 + " ";
 					}
 				}
 			}
@@ -1409,8 +1417,9 @@ Main.prototype = {
 				throw new js__$Boot_HaxeError("FAIL: str != null");
 			}
 			//li.textContent = HxOverrides.substr(name2,0,1).toUpperCase() + HxOverrides.substr(name2,1,name2.length - 1);
-			li.textContent = name2;
-			this.currentNamesElement.appendChild(li);
+//			li.textContent = name2;
+//			this.currentNamesElement.appendChild(li);
+			this.currentNamesElement.innerHTML +=name2 + " ";
 		}
 	}
 	,generateForRandomPreset: function() {
@@ -1503,8 +1512,9 @@ Main.prototype = {
 					throw new js__$Boot_HaxeError("FAIL: str != null");
 				}
 				//li.textContent = HxOverrides.substr(name2,0,1).toUpperCase() + HxOverrides.substr(name2,1,name2.length - 1);
-				li.textContent = name2;
-				this.currentNamesElement.appendChild(li);
+//				li.textContent = name2;
+//				this.currentNamesElement.appendChild(li);
+				this.currentNamesElement.innerHTML +=name2 + " ";
 			}
 		}
 	}
@@ -1594,8 +1604,9 @@ Main.prototype = {
 				if(!(name2 != null)) {
 					throw new js__$Boot_HaxeError("FAIL: str != null");
 				}
-				li.textContent = name2;//HxOverrides.substr(name2,0,1).toUpperCase() + HxOverrides.substr(name2,1,name2.length - 1);
-				this.currentNamesElement.appendChild(li);
+//				li.textContent = name2;//HxOverrides.substr(name2,0,1).toUpperCase() + HxOverrides.substr(name2,1,name2.length - 1);
+//				this.currentNamesElement.appendChild(li);
+				this.currentNamesElement.innerHTML +=name2 + " ";
 			}
 		}
 	}
@@ -1658,8 +1669,9 @@ Main.prototype = {
 			if(!(name != null)) {
 				throw new js__$Boot_HaxeError("FAIL: str != null");
 			}
-			li.textContent = name;//HxOverrides.substr(name,0,1).toUpperCase() + HxOverrides.substr(name,1,name.length - 1);
-			this.currentNamesElement.appendChild(li);
+//			li.textContent = name;//HxOverrides.substr(name,0,1).toUpperCase() + HxOverrides.substr(name,1,name.length - 1);
+//			this.currentNamesElement.appendChild(li);
+				this.currentNamesElement.innerHTML +=name + " ";
 		}
 	}
 	,getTrainingDataForKey: function(key) {
@@ -2673,12 +2685,36 @@ ID.currentnames = "currentnames";
 ID.shareresultsonly = "shareresultsonly";
 ID.shareresultsandsettings = "shareresultsandsettings";
 ID.shareedit = "shareedit";
-TrainingDatas["Polish"]=["Jeszcze Polska nie zginęła,","Kiedy my żyjemy.","Co nam obca przemoc wzięła,","Szablą odbierzemy","Marsz, marsz, Dąbrowski,","Z ziemi włoskiej do Polski,","Za twoim przewodem","Złączym się z narodem.","Przejdziem Wisłę, przejdziem Wartę,","Będziem Polakami,","Dał nam przykład Bonaparte,","Jak zwyciężać mamy.","Marsz, marsz, Dąbrowski","Jak Czarniecki do Poznania","Po szwedzkim zaborze,","Dla ojczyzny ratowania","Wrócim się przez morze.","Już tam ojciec do swej Basi","Mówi zapłakany-","Słuchaj jeno, pono nasi","Biją w tarabany."];
+TrainingDatas["Polish 2"]=["Jeszcze Polska nie zginęła,","Kiedy my żyjemy.","Co nam obca przemoc wzięła,","Szablą odbierzemy","Marsz, marsz, Dąbrowski,","Z ziemi włoskiej do Polski,","Za twoim przewodem","Złączym się z narodem.","Przejdziem Wisłę, przejdziem Wartę,","Będziem Polakami,","Dał nam przykład Bonaparte,","Jak zwyciężać mamy.","Marsz, marsz, Dąbrowski","Jak Czarniecki do Poznania","Po szwedzkim zaborze,","Dla ojczyzny ratowania","Wrócim się przez morze.","Już tam ojciec do swej Basi","Mówi zapłakany-","Słuchaj jeno, pono nasi","Biją w tarabany."];
+TrainingDatas["Schwyzerdütsch"]=[  "I läcke mini höde, wo und wenn ig wot Verstande ","Schwyzerdütsch ","Wilkomme","Grüezi ","Sali ","Grüezi mittenand","Sali zämme","Wie goots Ihne ","Wie goots ","Dangge, guet, und dir ","hänn is schon lang nümme g'seh.","Wie isch Ihre name ","Wie heissisch Du ","Wohär sind Sie ","Wohär bisch Du ","Ich bi vo ","Fröit mi","Guete Morge","Gueten Abig","Guete Daag","Gueten Oobe","Guet Nacht","Tschüss","Bis spöter","Sali","Alles Gueti","Broscht","wünsch Ihne e schöne Daag ","Ich wünsch Dir e schöne Daag ","Gueti Reis","Ich verstand nit","Bitte schwätze Sie langsamer ","schriibe Sie das uf ","schriib das uf ","Könne Sie Schwitzerdütsch reede ","Kasch Du Schwitzerdütsch reede ","Yo, e bitz","Exgüüsi","Was koschtet das","Es duet mr leid","Merci","vielmal","Dangge","Nüt z'dangge","Gäärn gscheh","Wo isch d'Toilette","Herr zahlt für alles","Möchtesch Du mit mir danze","Ich liib dich","I ha Di gärn","Gueti Besserig","Löhn Si mi in Ruh ","Loh mi in Ruh ","Füür","Schöni Wienachte und e guets neus Joor","Härzlichi Glückwünsch zum Geburtstag","Ai Sprooch isch nie gnueg","Mis Luftchüssiboot isch volle Aal"
+, " Auso liebi Manne ond Froue, s’Läbe uf däre Wäult hät e so huufe spannendi Siite, dass es doch eifach e risigi Fröid macht, met öi zäme Pläne z’schmiede föres tolls Fescht am Ändi vo däm Winter. Oder? Giits das öppe scho? Mir gsäih öis doch bim Verbrönne vom Böög wider ufem Sächsilüteplatz. Tschau zäme"];
 
-TrainingDatas["Schwyzerdütsch"]=[  "I läcke mini höde, wo und wenn ig wot Verstande ","Schwyzerdütsch ","Wilkomme","Grüezi ","Sali ","Grüezi mittenand","Sali zämme","Wie goots Ihne ","Wie goots ","Dangge, guet, und dir ","hänn is schon lang nümme g'seh.","Wie isch Ihre name ","Wie heissisch Du ","Wohär sind Sie ","Wohär bisch Du ","Ich bi vo ","Fröit mi","Guete Morge","Gueten Abig","Guete Daag","Gueten Oobe","Guet Nacht","Tschüss","Bis spöter","Sali","Alles Gueti","Broscht","wünsch Ihne e schöne Daag ","Ich wünsch Dir e schöne Daag ","Gueti Reis","Ich verstand nit","Bitte schwätze Sie langsamer ","schriibe Sie das uf ","schriib das uf ","Könne Sie Schwitzerdütsch reede ","Kasch Du Schwitzerdütsch reede ","Yo, e bitz","Exgüüsi","Was koschtet das","Es duet mr leid","Merci","vielmal","Dangge","Nüt z'dangge","Gäärn gscheh","Wo isch d'Toilette","Herr zahlt für alles","Möchtesch Du mit mir danze","Ich liib dich","I ha Di gärn","Gueti Besserig","Löhn Si mi in Ruh ","Loh mi in Ruh ","Füür","Schöni Wienachte und e guets neus Joor","Härzlichi Glückwünsch zum Geburtstag","Ai Sprooch isch nie gnueg","Mis Luftchüssiboot isch volle Aal"];
+TrainingDatas["Polish"] = ["W trosce o byt i przyszłość naszej Ojczyzny"
+  ,"odzyskawszy w 1989 roku możliwość suwerennego i demokratycznego stanowienia o Jej losie"
+  ,"my, Naród Polski - wszyscy obywatele Rzeczypospolitej"
+  ,"zarówno wierzący w Boga"
+  ,"będącego źródłem prawdy, sprawiedliwości, dobra i piękna"
+  ,"jak i nie podzielający tej wiary"
+  ,"a te uniwersalne wartości wywodzący z innych źródeł"
+  ,"równi w prawach i w powinnościach wobec dobra wspólnego - Polski"
+  ,"wdzięczni naszym przodkom za ich pracę, za walkę o niepodległość okupioną ogromnymi ofiarami, za kulturę zakorzenioną w chrześcijańskim dziedzictwie Narodu i ogólnoludzkich wartościach"
+  ,"nawiązując do najlepszych tradycji Pierwszej i Drugiej Rzeczypospolitej"
+  ,"zobowiązani, by przekazać przyszłym pokoleniom wszystko, co cenne z ponad tysiącletniego dorobku"
+  ,"złączeni więzami wspólnoty z naszymi rodakami rozsianymi po świecie"
+  ,"świadomi potrzeby współpracy ze wszystkimi krajami dla dobra Rodziny Ludzkiej"
+  ,"pomni gorzkich doświadczeń z czasów, gdy podstawowe wolności i prawa człowieka były w naszej Ojczyźnie łamane"
+  ,"pragnąc na zawsze zagwarantować prawa obywatelskie, a działaniu instytucji publicznych zapewnić rzetelność i sprawność"
+  ,"w poczuciu odpowiedzialności przed Bogiem lub przed własnym sumieniem"
+  ,"ustanawiamy Konstytucję Rzeczypospolitej Polskiej"
+  ,"jako prawa podstawowe dla państwa"
+  ,"oparte na poszanowaniu wolności i sprawiedliwości, współdziałaniu władz, dialogu społecznym oraz na zasadzie pomocniczości umacniającej uprawnienia obywateli i ich wspólnot"
+  ,"Wszystkich, którzy dla dobra Trzeciej Rzeczypospolitej tę Konstytucję będą stosowali"
+  ,"wzywamy, aby czynili to, dbając o zachowanie przyrodzonej godności człowieka"
+  ,"jego prawa do wolności i obowiązku solidarności z innymi"
+  ,"a poszanowanie tych zasad mieli za niewzruszoną podstawę Rzeczypospolitej Polskiej"];
 
-TrainingDatas["Abulia"]=TrainingDatas["Polish"];
-TrainingDatas["Schwyzerdütsch"].forEach (function(a){TrainingDatas["Abulia"].push(a)})
+TrainingDatas["Abülski"]=TrainingDatas["Schwyzerdütsch"].concat(TrainingDatas["Polish"],TrainingDatas["Schwyzerdütsch"]);
+//TrainingDatas["Schwyzerdütsch"].forEach (function(a){TrainingDatas["Abülski"].push(a + " "+ a);TrainingDatas["Abülski"].unshift(a)})
 
 //TrainingData['abulia']=TrainingDatas["Polish"]+TrainingDatas["Schwyzerdütsch"];
 Main.WEBSITE_URL = "http://localhost";
