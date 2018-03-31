@@ -558,6 +558,7 @@ Main.prototype = {
 					}
 				}
 			}
+      expandTextarea('currentname'); 
 		},false);
 		this.randomThemeElement.addEventListener("click",function() {
 			var topics = Type.getClassFields(TrainingDatas);

@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en-GB" xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width,user-scalable=yes,initial-scale=1,maximum-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+      <!-- Required meta tags -->
+          <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
 		<title>Procedural Name Generator - Markov Process Random Name And Word Generation</title>
-		<meta name="author" content="Sam Twidale">
         <meta name="description" content="This random name generator procedurally generates original names for animals, babies, characters, towns, or anything that needs a name.">
         <meta name="keywords" content="random name, name generator, name creator, procedural name generator, generator, procedural, markov, markov chain, names, boy names, girl names, baby names, list, dictionary">
         <meta name="subject" content="Name Generator">
         <meta name="robots" content="index, follow">
-        <link rel="canonical" href="https://www.samcodes.co.uk/project/markov-namegen/" />
+        <link rel="forked" href="https://www.samcodes.co.uk/project/markov-namegen/" />
         <meta property="og:title" content="Procedural Name Generator">
         <meta property="og:description" content="Generate original names using Markov chains.">
         <meta property="og:site_name" content="Samcodes">
@@ -55,8 +55,8 @@
 						</textarea>
 					</div>
 					
-					<div class="sliders stitched">
-						<div class="container">
+					<div class="d-none sliders stitched">
+						<div class="icontainer">
 							<h3>Length Range</h3>
 							<div id="minmaxlength" class="black"></div>
 						</div>
@@ -90,30 +90,49 @@
 				</div>
 			</div>
 		</section>
-		
-		<a class="button" id="generate">
-			<h2>Generate</h2>
+
+
+      <nav class="navbar navbar-light bg-light">
+          <span class="navbar-brand mb-0 h1">Abulia</span>
+      </nav>
+    <div class="container-fluid">
+    </div>
+
+    <div class="container">
+  <div class="row py-2">  
+		<a class="button btn btn-outline-primary" id="translate">
+		  Translate
 		</a>
-		<a class="button" id="random">
-			<h2>Random</h2>
+		<a class="button btn btn-outline-secondary" id="generate">
+		  I'm feeling Lucky	
 		</a>
-		
-		<br>
-		
-		<div class="container stitched">
-			<h2 id="namestitle">Names</h2>
-			<br>
-		
-			<p id="nonamesfound">Press "Settings" to customize, "Generate" to begin, and "Random" for a random theme.</p>
-			<textarea id="currentname" style="height:400px; width:800px">
-        
+		<a class="button btn btn-outline-secondary d-none" id="random">
+			Random
+		</a>
+	
+  </div>  
+  <div class="row py-2">  
+    <div class="col-sm">
+			<textarea id="from" class="form-control">
 			</textarea>
-		</div>
+      <small>Type text or a website address</small>
+    </div>
+    <div class="col-sm icontainer stitched">
+
+			<h2 class="d-none" id="namestitle">Names</h2>
 		
+			<p id="nonamesfound" class="d-none">Press "Settings" to customize, "Generate" to begin, and "Random" for a random theme.</p>
+			<textarea id="currentname" class="form-control" istyle="height:400px; width:800px">
+			</textarea>
+              </div>
+		
+  </div>
+  </div>
+</div>
 		<br>
 		
-		<div class="textboxes stitched">
-			<div class="container">
+		<div class="d-none textboxes stitched">
+			<div class="icontainer">
 			    <div>
 					<a class="button" id="shareresultsonly"><h3>Share Results</h3></a>
 					<a class="button" id="shareresultsandsettings"><h3>Share Results And Training Data</h3></a>
@@ -124,7 +143,7 @@
 			
 		<br>
 		
-		<div class="container stitched">
+		<div class="d-none icontainer stitched">
 			<h2>How It Works</h2>
 			<p>This site uses  <a href="https://en.wikipedia.org/wiki/Markov_chain" target="_blank">Markov chains</a> to <a href="https://en.wikipedia.org/wiki/Procedural_generation" target="_blank">procedurally generate</a> original names. Given a set of words as training data, the name generator calculates the conditional probability of a letter appearing after the sequence of letters chosen so far. There are dozens of training presets, and the corpus can also be manually edited through the settings dropdown section.</p>
 			<p>The generator maintains an array of models that look up to "n" characters back, where "n" is the maximum model order specified in the settings. The process starts by checking the highest order model, falling back to lower order models if necessary, using an approach called <a href="https://en.wikipedia.org/wiki/Katz%27s_back-off_model" target="_blank">Katz's back-off model</a>. As you increase the order setting, larger chunks of familiar words will appear in the generated output.</p>
@@ -138,5 +157,22 @@
 		<script type="text/javascript" src="js/wNumb.min.js"></script>
 		<script type="text/javascript" src="js/nouislider.min.js"></script>
 		<script type="text/javascript" src="js/markov.js"></script>
+    <script>
+function expandTextarea(id) {
+  console.log(id);
+  t=document.getElementById(id);
+  t.style.overflow = 'hidden';
+  t.style.height = 0;
+  t.style.height = t.scrollHeight + 'px';
+
+      document.getElementById(id).addEventListener('keyup', function() {
+                this.style.overflow = 'hidden';
+                        this.style.height = 0;
+                                this.style.height = this.scrollHeight + 'px';
+                                    }, false);
+}
+
+expandTextarea('currentname');
+    </script>
     </body>
 </html>
