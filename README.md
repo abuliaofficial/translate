@@ -1,75 +1,17 @@
-[![Project logo](https://github.com/Tw1ddle/MarkovNameGenerator/blob/master/screenshots/markovnamegen_logo.png?raw=true "Markov Namegen Procedural Random Name Generator Project logo")](http://www.samcodes.co.uk/project/markov-namegen/)
+For an art project, I created an imaginary country, [abulia](https://abulia.online) a former colony from Swizerland and Poland.
+And beside a flag and a moto, what else do we need? a language, Abülski.
 
-[![Travis Build Status](https://img.shields.io/travis/Tw1ddle/MarkovNameGenerator.svg?style=flat-square)](https://travis-ci.org/Tw1ddle/MarkovNameGenerator)
-
-**Markov Namegen** is a Markov chain-based procedural name generator written in Haxe. Run it now [in your browser](http://www.samcodes.co.uk/project/markov-namegen/).
-
-Demonstrates the [markov-namegen haxelib](http://lib.haxe.org/p/markov-namegen). Read the [documentation here](http://tw1ddle.github.io/MarkovNameGenerator/).
-
-## Features
-* Hundreds of editable training data presets.
-* Configurable corpus, order and prior model parameter settings.
-* Filter results by length, start, end and content.
-* Sort by Damerau-Levenshtein distance to list results by similarity.
-* Save and share custom data, settings and results with one click.
-
-## Usage
-
-Try the [demo](http://www.samcodes.co.uk/project/markov-namegen/) to generate your own words. For example:
-
-```
-Training Dataset: English Towns
-Order: 5
-Prior: 0.01
-Words To Generate: 100
-Max Processing Time: 500ms
-Length: 8-12
-Starts with: b
-Ends with:
-Include: ham
-Exclude:
-Similarity To: birmingham
-```
-
-A list of results will be displayed. Here are the first 10 results from this run:
-```
-Barkingham
-Basingham
-Birkenham
-Bebingham
-Bollingham
-Bridlingham
-Billenham
-Berwickham
-Botteringham
-Bradnincham
-```
-
-Hit one of the sharing buttons to share results and settings via a generated URL. Note that large training data sets generate URLs too long for some browsers and servers - reduce the amount of training data to work around this.
-
-## Install
-
-Get the Haxe library from [GitHub](https://github.com/Tw1ddle/MarkovNameGenerator) or through [haxelib](http://lib.haxe.org/p/markov-namegen/).
-
-Include it in your ```.hxml```
-```
--lib markov-namegen
-```
-
-Or add it to your ```Project.xml```:
-```
-<haxelib name="markov-namegen" />
-```
-
-## Screenshots
-Here is the demo in action:
-
-[![Screenshot](https://github.com/Tw1ddle/MarkovNameGenerator/blob/master/screenshots/screenshot1.png?raw=true "Markov Namegen Procedural Random Name Generator screenshot 1")](http://www.samcodes.co.uk/project/markov-namegen/)
+So by feeding a markov chain with a mix of swiss german (mostly guidebook sentences, but a bunch from a friend) and polish (the constitution), shake it and voila, you have something that looks like a language.
 
 
-[![Screenshot](https://github.com/Tw1ddle/MarkovNameGenerator/blob/master/screenshots/screenshot2.png?raw=true "Markov Namegen Procedural Random Name Generator screenshot 2")](http://www.samcodes.co.uk/project/markov-namegen/)
+
 
 ## How It Works
+
+**It is based on MarkovNameGen** is a Markov chain-based procedural name generator written in Haxe. Run it now [in your browser](http://www.samcodes.co.uk/project/markov-namegen/).
+
+
+Demonstrates the [markov-namegen haxelib](http://lib.haxe.org/p/markov-namegen). Read the [documentation here](http://tw1ddle.github.io/MarkovNameGenerator/).
 
 The [markov-namegen haxelib](http://lib.haxe.org/p/markov-namegen) uses [Markov chains](https://en.wikipedia.org/wiki/Markov_chain) to procedurally generate original words.
 
