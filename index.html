@@ -6,21 +6,21 @@
               <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<title>Procedural Name Generator - Markov Process Random Name And Word Generation</title>
-        <meta name="description" content="This random name generator procedurally generates original names for animals, babies, characters, towns, or anything that needs a name.">
-        <meta name="keywords" content="random name, name generator, name creator, procedural name generator, generator, procedural, markov, markov chain, names, boy names, girl names, baby names, list, dictionary">
+        <meta name="description" content="This translates into Abulski, or generate a new text, markov chains rules">
+        <meta name="keywords" content="procedural name generator, generator, markov, markov chain, abulski, abulia">
         <meta name="subject" content="Name Generator">
         <meta name="robots" content="index, follow">
         <link rel="forked" href="https://www.samcodes.co.uk/project/markov-namegen/" />
-        <meta property="og:title" content="Procedural Name Generator">
-        <meta property="og:description" content="Generate original names using Markov chains.">
-        <meta property="og:site_name" content="Samcodes">
+        <meta property="og:title" content="The best automatic translator to Abulski">
+        <meta property="og:description" content="Generate original translations using Markov chains.">
+        <meta property="og:site_name" content="Abulski generator and translator">
         <meta name="twitter:title" content="Procedural Name Generator">
         <meta name="twitter:description" content="Generate original names using Markov chains.">
-		<link rel="icon" type="image/x-icon" href="icon/favicon.png">
-		<link rel="apple-touch-icon-precomposed" type="image/x-icon" href="icon/apple-touch-icon-precomposed.png">
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
 		<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="icon/favicon.ico"><![endif]-->
 		<link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css">
 <style>
+.navbar-brand {font-weight:bold;}
 .c1 {color:#4885ed!important;}
 .c2 {color:#db3236;}
   .c3 {color:#f4c20d}
@@ -166,6 +166,29 @@
 		<script type="text/javascript" src="js/nouislider.min.js"></script>
 		<script type="text/javascript" src="js/markov.js"></script>
     <script>
+
+ 
+document.getElementById('translate').addEventListener('click', function() {
+  var result=document.getElementById("currentname");
+  var length=document.getElementById("from").value.length;
+
+  eventFire(document.getElementById('generate'), 'click');
+  var text=result.value;
+  if (length) {
+    result.innerHTML =  text.substr(0, length); 
+  }
+});
+
+
+function eventFire(el, etype){
+    if (el.fireEvent) {
+          el.fireEvent('on' + etype);
+            } else {
+                  var evObj = document.createEvent('Events');
+                      evObj.initEvent(etype, true, false);
+                          el.dispatchEvent(evObj);
+                            }
+}
 function expandTextarea(id) {
   t=document.getElementById(id);
   t.style.overflow = 'hidden';
